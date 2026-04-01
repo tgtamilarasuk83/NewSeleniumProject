@@ -1,6 +1,5 @@
 package seleniumjava;
-import java.io.FileWriter;
-import java.io.IOException;
+
 
 
 import org.openqa.selenium.WebDriver;
@@ -29,18 +28,7 @@ public class Web_driver_Commands {
 		System.out.println("Length: " + pageSource.length());
 
 
-		try {
-			
-			FileWriter writer = new FileWriter("FlipkartPageSource.txt");
-			writer.write(pageSource);
-			writer.close();
-
-			System.out.println("Page source");
-
-		} catch (IOException e) {
-			System.out.println("Error");
-			e.printStackTrace();
-		}
+		
 
 		String expectedUrl = "https://www.flipkart.com/";
 
