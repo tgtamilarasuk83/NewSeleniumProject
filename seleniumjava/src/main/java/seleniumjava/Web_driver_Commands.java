@@ -10,7 +10,7 @@ public class Web_driver_Commands {
 
 	public static void main(String[] args) {
 
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://www.flipkart.com/");
 
@@ -25,7 +25,20 @@ public class Web_driver_Commands {
 
 		String pageSource = driver.getPageSource();
 		System.out.println("Length: " + pageSource.length());
-	
+
+
+		try {
+			
+			FileWriter writer = new FileWriter("FlipkartPageSource.txt");
+			writer.write(pageSource);
+			writer.close();
+
+			System.out.println("Page source");
+
+		} catch (IOException e) {
+			System.out.println("Error");
+			e.printStackTrace();
+		}
 
 		String expectedUrl = "https://www.flipkart.com/";
 
