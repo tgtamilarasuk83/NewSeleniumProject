@@ -1,4 +1,6 @@
 package seleniumjava;
+import java.io.FileWriter;
+import java.io.IOException;
 
 
 import org.openqa.selenium.WebDriver;
