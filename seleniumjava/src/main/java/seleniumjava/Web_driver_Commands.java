@@ -2,13 +2,14 @@ package seleniumjava;
 
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class Web_driver_Commands {
 
 	public static void main(String[] args) {
 
-		WebDriver driver = new EdgeDriver();
+		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://www.flipkart.com/");
 
